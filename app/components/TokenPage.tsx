@@ -89,7 +89,7 @@ const TokenPage = () => {
   return (
     <div className="py-6 px-4">
       <div className="flex flex-col lg:flex-row items-start pl-5 lg:items-center justify-between">
-        <div className="text-3xl pb-4 flex items-end gap-x-2 font-semibold text-zinc-800">
+        <div className="text-3xl pb-4 flex items-end gap-x-2 font-semibol">
           <span className="relative">
             {sellTokenData?.logoURI && (
               <Image
@@ -110,7 +110,9 @@ const TokenPage = () => {
               />
             )}
           </span>{" "}
-          <span className="min-w-fit">{sellTokenData?.name}</span>
+          <span className="min-w-fit text-foreground">
+            {sellTokenData?.name}
+          </span>
           <span className="text-zinc-500 text-lg mt-1 ml-2">
             {sellTokenData?.symbol}
           </span>
@@ -148,7 +150,9 @@ const TokenPage = () => {
               </Button>
             )}
             <Link
-              href={`https://polygonscan.com/token/${sellTokenData?.address}`}
+              href={`https://blockchair.com/${chain?.name
+                .replace(/\s+/g, "-")
+                .toLowerCase()}/address/${sellTokenData?.address}`}
               className={cn(
                 buttonVariants({ variant: "outline" }),
                 "rounded-full p-3 bg-zinc-300/20 hover:bg-zinc-400/20 transition-all"
@@ -163,7 +167,7 @@ const TokenPage = () => {
       <div className="p-2 grid grid-cols-1 lg:grid-cols-5 gap-y-4 lg:gap-4">
         <Card className="col-span-3 pb-0 overflow-hidden h-fit">
           <CardHeader className="flex pt-4 flex-col sm:flex-row items-start sm:items-center justify-between">
-            <CardTitle className="text-3xl sm:pl-3 text-zinc-800 font-normal gap-y-1.5 flex flex-col items-start justify-start">
+            <CardTitle className="text-3xl sm:pl-3 text-foreground font-normal gap-y-1.5 flex flex-col items-start justify-start">
               <span className="pt-4">
                 {price && sellTokenData ? (
                   `$${price}`
@@ -183,7 +187,7 @@ const TokenPage = () => {
                     <Skeleton className="w-[50px] h-[20px] rounded-3xl" />
                   )}
                 </span>{" "}
-                <span className="text-muted-foreground">
+                <span className="text-foreground">
                   {getPeriodWording(period)}
                 </span>
               </div>
@@ -215,7 +219,7 @@ const TokenPage = () => {
         </Card>
         <Card className="col-span-2 flex flex-col">
           <CardHeader className="flex pb-4 border-b border-border/50 flex-row items-center justify-between">
-            <CardTitle className="text-lg font-medium text-zinc-800">
+            <CardTitle className="text-lg font-mediumtext-foreground">
               Market
             </CardTitle>
           </CardHeader>

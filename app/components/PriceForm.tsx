@@ -160,7 +160,7 @@ const PriceForm: React.FC<PriceFormProps> = ({
           <div className="flex flex-col justify-center pt-4 px-4">
             <Label
               htmlFor="sell"
-              className="text-zinc-700 font-medium mb-4 ml-1"
+              className=" text-foreground font-medium mb-4 ml-1"
             >
               Sell
             </Label>
@@ -223,14 +223,14 @@ const PriceForm: React.FC<PriceFormProps> = ({
       <div className="relative w-[95%] translate-x-1/2 -translate-y-4">
         <ArrowUpDown
           onClick={swapTokenDirection}
-          className="h-8 w-8 p-1.5 absolute bg-background rounded-full border-border border-2 text-zinc-800 hover:cursor-pointer hover:border-zinc-300 hover:bg-muted transition-all"
+          className="h-8 w-8 p-1.5 absolute bg-background rounded-full border-border border-2 text-foreground hover:cursor-pointer hover:border-zinc-300 hover:bg-muted transition-all"
         />
       </div>
       <div className="h-full">
         <div className="flex flex-col justify-center p-4">
           <Label
             htmlFor="buy-amount"
-            className="block text-zinc-700 font-medium mb-4 ml-1"
+            className="blocktext-foreground font-medium mb-4 ml-1"
           >
             Receive
           </Label>

@@ -24,9 +24,9 @@ a {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 3.9%;
-    --card: 0 0% 100%;
+    --background: white;
+    --foreground: black;
+    --card: linear-gradient(130deg, #464646, #7779f3, #121128);
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
@@ -51,10 +51,10 @@ a {
     --radius: 0.5rem;
   }
   .dark {
-    --background: 240 10% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --background: #121128;
+    --foreground: white;
+    --card: linear-gradient(130deg, #66ccff, #ffc3e6, #ededed);
+    --card-foreground: white;
     --popover: 240 10% 3.9%;
     --popover-foreground: 0 0% 98%;
     --primary: 0 0% 98%;
@@ -67,7 +67,7 @@ a {
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 240 3.7% 15.9%;
+    --border: white;
     --input: 240 3.7% 15.9%;
     --ring: 240 4.9% 83.9%;
     --chart-1: 220 70% 50%;
@@ -84,12 +84,8 @@ a {
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
-  }
-  .background--custom {
-    background: linear-gradient(130deg, #f6d4ff, #f7f7f8, #f0dffc);
-    background-size: 300% 300%;
-    animation: gradient 5s alternate infinite;
+    background: var(--background);
+    color: var(--foreground);
   }
   @keyframes gradient {
     0% {

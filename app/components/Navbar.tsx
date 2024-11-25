@@ -16,8 +16,14 @@ export function Navbar({ items, children }: MainNavProps) {
   return (
     <div className=" flex gap-6 md:gap-10">
       <Link href="/" className="flex items-center space-x-2">
-        <Image src="/favicon.ico" width={40} height={40} alt="tokenIcon" />
-        <span className="font-bold text-2xl">{siteConfig.name}</span>
+        <Image
+          src="/favicon.ico"
+          width={40}
+          height={40}
+          alt="tokenIcon"
+          className="object-contain"
+        />
+        <span className="font-bold text-3xl">{siteConfig.name}</span>
       </Link>
     </div>
   );
